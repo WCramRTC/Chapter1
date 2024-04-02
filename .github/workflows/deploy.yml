@@ -14,5 +14,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        branch: main # The branch the action should deploy to.
-        folder: src # The folder the action should deploy.
+        branch: gh-pages  # The target branch to deploy to
+        folder: src  # The folder to deploy
+        token: ${{ secrets.GITHUB_TOKEN }}  # or ${{ secrets.YOUR_CUSTOM_SECRET }} if using a PAT
+
